@@ -77,12 +77,12 @@ func _ready() -> void:
 		
 		for slot: DOCK_SCRIPT.PotSlot in DOCK.current_pot_file.slots:
 			if !slot.message_description.is_empty():
-				var saving_description := ''
+				var saving_slot_description := ''
 				for line: String in slot.message_description.trim_suffix('\n').split('\n'):
 					if line.is_empty():
 						continue
-					saving_description += '# ' + line.trim_prefix('#').strip_edges() + '\n'
-				file_content += '# ' + saving_description.trim_suffix('\n') + '\n'
+					saving_slot_description += '# ' + get_multiline_string(line.strip_edges())
+				file_content += saving_slot_description.trim_suffix('\n') + '\n'
 			if !slot.message_flag.is_empty():
 				file_content += '#, ' + get_multiline_string(slot.message_flag)
 			

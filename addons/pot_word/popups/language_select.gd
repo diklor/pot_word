@@ -20,6 +20,10 @@ func _ready() -> void:
 	
 	%language_select_vbox.get_node('title/refresh').pressed.connect(await load_lists)
 	%operations_hbox/original_select_lang.pressed.connect(await show_popup.bind(%operations_hbox/original_lang_line_edit))
+	%operations_hbox/target_lang_line_edit.text_changed.connect(func(new_text: String) -> void:
+		if DOCK.current_pot_file != null:
+			DOCK.current_pot_file.export_description['Language'] = new_text
+	)
 	%operations_hbox/target_select_lang.pressed.connect(await show_popup.bind(%operations_hbox/target_lang_line_edit, true))
 	language_select_vbox.get_node('select').pressed.connect(func() -> void:
 		if _is_target_lang:
