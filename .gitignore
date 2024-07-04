@@ -13,3 +13,7 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Custom
+preview.jpg
+addons\pot_word\icon.png
