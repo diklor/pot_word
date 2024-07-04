@@ -1,0 +1,1952 @@
+[gd_scene load_steps=18 format=3 uid="uid://bpdvt0kk56wwx"]
+
+[ext_resource type="Theme" uid="uid://c6i0cmgtiyl7w" path="res://addons/pot_word/dock_theme.tres" id="1_au6w7"]
+[ext_resource type="Script" path="res://addons/pot_word/dock.gd" id="2_ugof6"]
+[ext_resource type="Script" path="res://addons/pot_word/set_editor_icon.gd" id="3_lq5gb"]
+[ext_resource type="Script" path="res://addons/pot_word/popups/online_translation.gd" id="4_4nigb"]
+[ext_resource type="Script" path="res://addons/pot_word/popups/save.gd" id="5_5gcej"]
+[ext_resource type="Script" path="res://addons/pot_word/popups/language_select.gd" id="6_f1x3g"]
+[ext_resource type="Script" path="res://addons/pot_word/popups/information.gd" id="7_4m4xv"]
+[ext_resource type="Script" path="res://addons/pot_word/popups/clear.gd" id="8_5d0xx"]
+[ext_resource type="Script" path="res://addons/pot_word/popups/rename_scene_names.gd" id="9_30gso"]
+
+[sub_resource type="Image" id="Image_cd8sa"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_w4ala"]
+image = SubResource("Image_cd8sa")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lv440"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vwg8b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5a5h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yswm3"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_e63gn"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_u2hri"]
+
+[node name="dock" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -743.0
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_au6w7")
+script = ExtResource("2_ugof6")
+
+[node name="color_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0585938, 0.0585938, 0.0585938, 1)
+
+[node name="margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="vbox" type="VBoxContainer" parent="margin"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="dock_title" type="Label" parent="margin/vbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "POT Word 1.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="theme_button" type="Button" parent="margin/vbox/dock_title"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Toggle theme (Long if many slots)"
+toggle_mode = true
+button_pressed = true
+text = "Toggle"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Theme"
+
+[node name="wait_button" type="CheckButton" parent="margin/vbox/dock_title"]
+self_modulate = Color(1, 1, 1, 0.392157)
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -19.5
+offset_right = 157.0
+offset_bottom = 19.5
+grow_vertical = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Wait little pauses during loading"
+button_pressed = true
+text = "Wait on loading"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Time"
+
+[node name="topbar" type="Panel" parent="margin/vbox"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="margin" type="MarginContainer" parent="margin/vbox/topbar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="top_bar_hbox" type="HBoxContainer" parent="margin/vbox/topbar/margin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="undo" type="Button" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Undo"
+text = "Undo"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Back"
+
+[node name="redo" type="Button" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Redo"
+text = "Redo"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Forward"
+
+[node name="undoredo_history_counter" type="Label" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0/0"
+
+[node name="undoredo_history_description" type="Label" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 2
+
+[node name="v_separator" type="VSeparator" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_lv440")
+
+[node name="v_separator_right" type="VSeparator" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_lv440")
+
+[node name="clear" type="Button" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Exit file"
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "Clear"
+
+[node name="save" type="Button" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+custom_minimum_size = Vector2(76, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Save options"
+disabled = true
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "Save"
+
+[node name="reload" type="Button" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Reload current file (Re-read). Doesn't reset anything, just read again with all changes"
+text = "Reload file"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="refresh" type="Button" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Refresh slots"
+text = "Refresh"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="online_translation" type="Button" parent="margin/vbox/topbar/margin/top_bar_hbox"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+text = "Online translation (Test)"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Translation"
+
+[node name="search_hbox" type="HBoxContainer" parent="margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="line_edit" type="LineEdit" parent="margin/vbox/search_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Search..."
+
+[node name="scene_option" type="OptionButton" parent="margin/vbox/search_hbox"]
+layout_mode = 2
+size_flags_horizontal = 8
+tooltip_text = "Select slots with this scene name"
+theme_override_font_sizes/font_size = 12
+item_count = 1
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "All"
+popup/item_0/icon = SubResource("ImageTexture_w4ala")
+popup/item_0/id = 0
+script = ExtResource("3_lq5gb")
+icon_name = "PackedScene"
+
+[node name="search_translation" type="CheckButton" parent="margin/vbox/search_hbox"]
+layout_mode = 2
+text = "Search in translation"
+metadata/state_string = "original"
+
+[node name="v_separator" type="VSeparator" parent="margin/vbox/search_hbox"]
+layout_mode = 2
+
+[node name="_hide" type="Label" parent="margin/vbox/search_hbox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.588235)
+theme_override_font_sizes/font_size = 14
+text = "Hide:"
+
+[node name="only_numbers" type="CheckBox" parent="margin/vbox/search_hbox"]
+layout_mode = 2
+tooltip_text = "Hide slots with only numbers"
+text = "Only Numbers"
+
+[node name="one_symbol" type="CheckBox" parent="margin/vbox/search_hbox"]
+layout_mode = 2
+tooltip_text = "Hide slots with 1 symbol"
+text = "1 Symbol"
+
+[node name="operations_hbox" type="HBoxContainer" parent="margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="select_all" type="CheckBox" parent="margin/vbox/operations_hbox"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Choose all visible slots"
+text = "Select All"
+
+[node name="clear_translated" type="Button" parent="margin/vbox/operations_hbox"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Clear all translated texts. Works only with visible slots"
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "Clear"
+
+[node name="duplicate_original" type="Button" parent="margin/vbox/operations_hbox"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Duplicate all original slots to translated. Works only with visible slots"
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "EditAddRemove"
+
+[node name="rename_scene_names" type="Button" parent="margin/vbox/operations_hbox"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+tooltip_text = "Duplicate all original slots to translated"
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "Rename"
+
+[node name="v_separator" type="VSeparator" parent="margin/vbox/operations_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="original_lang_line_edit" type="LineEdit" parent="margin/vbox/operations_hbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "en"
+placeholder_text = "Original lang..."
+expand_to_text_length = true
+
+[node name="original_select_lang" type="Button" parent="margin/vbox/operations_hbox"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+tooltip_text = "Select"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Translation"
+
+[node name="target_lang_line_edit" type="LineEdit" parent="margin/vbox/operations_hbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+placeholder_text = "Target lang..."
+expand_to_text_length = true
+
+[node name="target_select_lang" type="Button" parent="margin/vbox/operations_hbox"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+tooltip_text = "Select"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Translation"
+
+[node name="main_scroll" type="ScrollContainer" parent="margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+scroll_deadzone = 6
+
+[node name="margin" type="MarginContainer" parent="margin/vbox/main_scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_right = 14
+
+[node name="vbox" type="VBoxContainer" parent="margin/vbox/main_scroll/margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="h_separator" type="HSeparator" parent="margin/vbox/main_scroll/margin/vbox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxTexture_vwg8b")
+
+[node name="file_info_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="file_path" type="Label" parent="margin/vbox/main_scroll/margin/vbox/file_info_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "res://folder/file_path.tscn"
+
+[node name="more" type="Button" parent="margin/vbox/main_scroll/margin/vbox/file_info_hbox"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+text = "More"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "BoneMapperHandleCircle"
+
+[node name="open_path" type="Button" parent="margin/vbox/main_scroll/margin/vbox/file_info_hbox"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+text = "Open path"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Folder"
+
+[node name="h_separator2" type="HSeparator" parent="margin/vbox/main_scroll/margin/vbox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxTexture_vwg8b")
+
+[node name="drop" type="ReferenceRect" parent="margin/vbox/main_scroll/margin/vbox"]
+custom_minimum_size = Vector2(500, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+border_color = Color(1, 1, 1, 0.392157)
+editor_only = false
+
+[node name="hbox" type="VBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/drop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="select_file_button" type="Button" parent="margin/vbox/main_scroll/margin/vbox/drop/hbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Select file (.pot or .po)"
+
+[node name="label" type="Label" parent="margin/vbox/main_scroll/margin/vbox/drop/hbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Drop .pot or .po file here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="h_separator3" type="HSeparator" parent="margin/vbox/main_scroll/margin/vbox"]
+layout_mode = 2
+theme_override_constants/separation = 60
+theme_override_styles/separator = SubResource("StyleBoxTexture_vwg8b")
+
+[node name="details_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox"]
+layout_mode = 2
+
+[node name="label" type="Label" parent="margin/vbox/main_scroll/margin/vbox/details_hbox"]
+layout_mode = 2
+
+[node name="slots_scroll_vbox" type="VBoxContainer" parent="margin/vbox/main_scroll/margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="_slot_tmp" type="VBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="h_separator" type="HSeparator" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+layout_mode = 2
+
+[node name="text_edits" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="index_check" type="CheckBox" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits"]
+layout_mode = 2
+text = "1"
+
+[node name="original" type="TextEdit" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 1.1
+placeholder_text = "Original..."
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits/original"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits/original/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="translated" type="TextEdit" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits/translated"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits/translated/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="clear" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits/translated/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Clear"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Close"
+
+[node name="scene_name_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+modulate = Color(1, 1, 1, 0.54902)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="_label" type="Label" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/scene_name_hbox"]
+layout_mode = 2
+tooltip_text = "(#: folder/scene.tscn)"
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 0.27451)
+text = "Scene Name"
+
+[node name="text_edit" type="TextEdit" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/scene_name_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+placeholder_text = "folder/scene.tscn..."
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/scene_name_hbox/text_edit"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/scene_name_hbox/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="clear" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/scene_name_hbox/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Clear"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Close"
+
+[node name="hide" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/scene_name_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Remove"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "GuiVisibilityHidden"
+
+[node name="id_previous" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+modulate = Color(1, 1, 1, 0.54902)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="_label" type="Label" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/id_previous"]
+layout_mode = 2
+tooltip_text = "(#| Previous text)"
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 0.27451)
+text = "Previous Original"
+
+[node name="text_edit" type="TextEdit" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/id_previous"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+placeholder_text = "Previous original..."
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/id_previous/text_edit"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/id_previous/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="clear" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/id_previous/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Clear"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Close"
+
+[node name="remove" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/id_previous"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Remove"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Remove"
+
+[node name="flag" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+modulate = Color(1, 1, 1, 0.54902)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="_label" type="Label" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/flag"]
+layout_mode = 2
+tooltip_text = "(#, Flag) "
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 0.27451)
+text = "Flag"
+
+[node name="text_edit" type="TextEdit" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/flag"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+placeholder_text = "Flag..."
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/flag/text_edit"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/flag/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="clear" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/flag/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Clear"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Close"
+
+[node name="remove" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/flag"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Remove"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Remove"
+
+[node name="original_plural" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="_label" type="Label" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/original_plural"]
+layout_mode = 2
+tooltip_text = "Original plural text
+(msgid_plural)
+(Translated text in exported file will be msgstr[0] if plural, otherwise just msgstr)"
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 0.27451)
+text = "Plural"
+
+[node name="remove" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/original_plural"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Remove"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Remove"
+
+[node name="text_edit" type="TextEdit" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/original_plural"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+placeholder_text = "Original plural..."
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/original_plural/text_edit"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/original_plural/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="text_edits_plural" type="VBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="_plural_tmp" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="_remove" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural/_plural_tmp"]
+self_modulate = Color(0.75, 0.75, 0.75, 1)
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+tooltip_text = "Remove this plural"
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "Remove"
+
+[node name="_label" type="Label" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural/_plural_tmp"]
+layout_mode = 2
+tooltip_text = "msgstr[1]"
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 0.27451)
+text = "Plural form id"
+
+[node name="plural_index" type="SpinBox" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural/_plural_tmp"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 1.1
+tooltip_text = "Plural count (1 default)"
+max_value = 1000.0
+alignment = 1
+
+[node name="translated" type="TextEdit" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural/_plural_tmp"]
+layout_mode = 2
+size_flags_horizontal = 3
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural/_plural_tmp/translated"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural/_plural_tmp/translated/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="clear" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural/_plural_tmp/translated/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Clear"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Close"
+
+[node name="add" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/text_edits_plural/_plural_tmp"]
+self_modulate = Color(0.75, 0.75, 0.75, 1)
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+tooltip_text = "Add new plural"
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "InsertAfter"
+
+[node name="scene_name" type="Label" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 0.27451)
+theme_override_font_sizes/font_size = 14
+text = "   scene.name"
+
+[node name="description" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+modulate = Color(1, 1, 1, 0.54902)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="_label" type="Label" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/description"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.27451)
+text = "Description"
+
+[node name="text_edit" type="TextEdit" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/description"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+placeholder_text = "Description..."
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/description/text_edit"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/description/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="clear" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/description/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Clear"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Close"
+
+[node name="remove" type="Button" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp/description"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Remove"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Remove"
+
+[node name="h_separator2" type="HSeparator" parent="margin/vbox/main_scroll/margin/vbox/slots_scroll_vbox/_slot_tmp"]
+layout_mode = 2
+
+[node name="online_translation_popup" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+script = ExtResource("4_4nigb")
+
+[node name="close_button" type="Button" parent="online_translation_popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5a5h")
+flat = true
+
+[node name="panel" type="PanelContainer" parent="online_translation_popup"]
+self_modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 85.0
+offset_right = -141.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin" type="MarginContainer" parent="online_translation_popup/panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="vbox" type="VBoxContainer" parent="online_translation_popup/panel/margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="title" type="Label" parent="online_translation_popup/panel/margin/vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Online translation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="online_translation_scroll_buttons" type="HBoxContainer" parent="online_translation_popup/panel/margin/vbox/title"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="up" type="Button" parent="online_translation_popup/panel/margin/vbox/title/online_translation_scroll_buttons"]
+layout_mode = 2
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "ArrowUp"
+
+[node name="down" type="Button" parent="online_translation_popup/panel/margin/vbox/title/online_translation_scroll_buttons"]
+layout_mode = 2
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "ArrowDown"
+
+[node name="label" type="Label" parent="online_translation_popup/panel/margin/vbox"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+text = "Click on the \"Translate\" button in all the texts here and paste them into the \"Translated\" cells
+(Most likely there is one pair of texts here)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="online_translation_hbox" type="HBoxContainer" parent="online_translation_popup/panel/margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="label" type="Label" parent="online_translation_popup/panel/margin/vbox/online_translation_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Prefix to not translate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="not_translate_prefix" type="LineEdit" parent="online_translation_popup/panel/margin/vbox/online_translation_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Messages starting with these characters wil not be translated"
+placeholder_text = "Prefix..."
+
+[node name="separator" type="LineEdit" parent="online_translation_popup/panel/margin/vbox/online_translation_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Line separator. String escaped character will be replaced
+( c_unespace() ).
+\"\\\\\" - \"\\\",   \"\\n\" - new line,   \"\\s\" - \" \",   ..."
+text = "\\n\\\\\\n"
+placeholder_text = "Line separator (\\n\\\\\\n)..."
+
+[node name="h_separator" type="HSeparator" parent="online_translation_popup/panel/margin/vbox"]
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.55
+
+[node name="label2" type="Label" parent="online_translation_popup/panel/margin/vbox"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+text = "Click on the \"Translate\" button in all the texts here and paste them into the \"Translated\" cells
+(Most likely there is one pair of texts here)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="translations_scroll" type="ScrollContainer" parent="online_translation_popup/panel/margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="online_translation_texts_list" type="VBoxContainer" parent="online_translation_popup/panel/margin/vbox/translations_scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="_text_edits_tmp" type="HBoxContainer" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="original" type="PanelContainer" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="vbox" type="VBoxContainer" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp/original"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp/original/vbox"]
+layout_mode = 2
+text = "Original"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text_edit" type="TextEdit" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp/original/vbox"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 8
+text = "Text1
+Text2
+Text3"
+placeholder_text = "Ctrl+C..."
+editable = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="open_link" type="Button" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp/original/vbox/text_edit"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -89.0
+offset_top = 9.0
+offset_right = -8.0
+offset_bottom = 48.0
+grow_horizontal = 0
+tooltip_text = "Open translation link"
+text = "Open"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "ExternalLink"
+
+[node name="translated" type="PanelContainer" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp"]
+self_modulate = Color(0, 0.470588, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="vbox" type="VBoxContainer" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp/translated"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp/translated/vbox"]
+layout_mode = 2
+text = "Translated"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text_edit" type="TextEdit" parent="online_translation_popup/panel/margin/vbox/translations_scroll/online_translation_texts_list/_text_edits_tmp/translated/vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/background_color = Color(0, 0.470588, 1, 0.0392157)
+theme_override_font_sizes/font_size = 8
+placeholder_text = "Paste here (Slashes are needed)..."
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="online_translation_done" type="Button" parent="online_translation_popup/panel/margin/vbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Done"
+
+[node name="_esc_tip" type="Label" parent="online_translation_popup/panel"]
+self_modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "ESC"
+
+[node name="save_popup" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+script = ExtResource("5_5gcej")
+
+[node name="close_button" type="Button" parent="save_popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5a5h")
+flat = true
+
+[node name="panel" type="PanelContainer" parent="save_popup"]
+self_modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 135.0
+offset_right = -141.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin" type="MarginContainer" parent="save_popup/panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="save_popup_vbox" type="VBoxContainer" parent="save_popup/panel/margin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="title" type="Label" parent="save_popup/panel/margin/save_popup_vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Save options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="h_separator" type="HSeparator" parent="save_popup/panel/margin/save_popup_vbox"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.55
+
+[node name="save_properties_hbox" type="HBoxContainer" parent="save_popup/panel/margin/save_popup_vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="clear_comments" type="CheckBox" parent="save_popup/panel/margin/save_popup_vbox/save_properties_hbox"]
+layout_mode = 2
+text = "Clear comments"
+
+[node name="clear_description" type="CheckBox" parent="save_popup/panel/margin/save_popup_vbox/save_properties_hbox"]
+layout_mode = 2
+text = "Clear description"
+
+[node name="scene_path_hbox" type="HBoxContainer" parent="save_popup/panel/margin/save_popup_vbox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="_scene_names" type="Label" parent="save_popup/panel/margin/save_popup_vbox/scene_path_hbox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.588235)
+theme_override_font_sizes/font_size = 14
+text = "Scene names: "
+
+[node name="scene_path_option" type="OptionButton" parent="save_popup/panel/margin/save_popup_vbox/scene_path_hbox"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Extension"
+item_count = 7
+selected = 2
+fit_to_longest_item = false
+popup/item_0/text = "res://folder/etc/scene.tscn"
+popup/item_0/icon = SubResource("ImageTexture_w4ala")
+popup/item_0/id = 0
+popup/item_1/text = "/folder/etc/scene.tscn"
+popup/item_1/icon = SubResource("ImageTexture_w4ala")
+popup/item_1/id = 1
+popup/item_2/text = "folder/etc/scene.tscn (Default)"
+popup/item_2/icon = SubResource("ImageTexture_w4ala")
+popup/item_2/id = 2
+popup/item_3/text = "etc/scene.tscn"
+popup/item_3/icon = SubResource("ImageTexture_w4ala")
+popup/item_3/id = 3
+popup/item_4/text = "scene.tscn"
+popup/item_4/icon = SubResource("ImageTexture_w4ala")
+popup/item_4/id = 4
+popup/item_5/text = "scene"
+popup/item_5/icon = SubResource("ImageTexture_w4ala")
+popup/item_5/id = 5
+popup/item_6/text = "None"
+popup/item_6/icon = SubResource("ImageTexture_w4ala")
+popup/item_6/id = 6
+script = ExtResource("3_lq5gb")
+icon_name = "PackedScene"
+
+[node name="encryption_key" type="LineEdit" parent="save_popup/panel/margin/save_popup_vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Encryption key..."
+
+[node name="export_description" type="PanelContainer" parent="save_popup/panel/margin/save_popup_vbox"]
+self_modulate = Color(0.441406, 0.441406, 0.441406, 1)
+layout_mode = 2
+
+[node name="export_information_description_vbox" type="GridContainer" parent="save_popup/panel/margin/save_popup_vbox/export_description"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="_property_tmp" type="HBoxContainer" parent="save_popup/panel/margin/save_popup_vbox/export_description/export_information_description_vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="remove" type="Button" parent="save_popup/panel/margin/save_popup_vbox/export_description/export_information_description_vbox/_property_tmp"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Remove"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Remove"
+
+[node name="key" type="LineEdit" parent="save_popup/panel/margin/save_popup_vbox/export_description/export_information_description_vbox/_property_tmp"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.784314)
+text = "Language"
+expand_to_text_length = true
+
+[node name="colon" type="Label" parent="save_popup/panel/margin/save_popup_vbox/export_description/export_information_description_vbox/_property_tmp"]
+layout_mode = 2
+text = ":"
+
+[node name="value" type="LineEdit" parent="save_popup/panel/margin/save_popup_vbox/export_description/export_information_description_vbox/_property_tmp"]
+layout_mode = 2
+placeholder_text = "Value..."
+expand_to_text_length = true
+
+[node name="reset" type="Button" parent="save_popup/panel/margin/save_popup_vbox/export_description/export_information_description_vbox/_property_tmp"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="__add" type="Button" parent="save_popup/panel/margin/save_popup_vbox/export_description/export_information_description_vbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Add new"
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "Add"
+
+[node name="h_separator2" type="HSeparator" parent="save_popup/panel/margin/save_popup_vbox"]
+layout_mode = 2
+size_flags_vertical = 10
+size_flags_stretch_ratio = 0.55
+theme_override_styles/separator = SubResource("StyleBoxEmpty_yswm3")
+
+[node name="save_popup_buttons_hbox" type="HBoxContainer" parent="save_popup/panel/margin/save_popup_vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="back" type="Button" parent="save_popup/panel/margin/save_popup_vbox/save_popup_buttons_hbox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+
+[node name="save" type="Button" parent="save_popup/panel/margin/save_popup_vbox/save_popup_buttons_hbox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="_esc_tip" type="Label" parent="save_popup/panel"]
+self_modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "ESC"
+
+[node name="language_select_popup" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+script = ExtResource("6_f1x3g")
+
+[node name="close_button" type="Button" parent="language_select_popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5a5h")
+flat = true
+
+[node name="panel" type="PanelContainer" parent="language_select_popup"]
+self_modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 179.0
+offset_top = 23.0
+offset_right = -179.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin" type="MarginContainer" parent="language_select_popup/panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="language_select_vbox" type="VBoxContainer" parent="language_select_popup/panel/margin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="title" type="Label" parent="language_select_popup/panel/margin/language_select_vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Language selection"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="refresh" type="Button" parent="language_select_popup/panel/margin/language_select_vbox/title"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="hbox" type="HBoxContainer" parent="language_select_popup/panel/margin/language_select_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="languages" type="VBoxContainer" parent="language_select_popup/panel/margin/language_select_vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="line_edit" type="LineEdit" parent="language_select_popup/panel/margin/language_select_vbox/hbox/languages"]
+layout_mode = 2
+placeholder_text = "Language..."
+
+[node name="h_separator" type="HSeparator" parent="language_select_popup/panel/margin/language_select_vbox/hbox/languages"]
+layout_mode = 2
+
+[node name="scroll" type="ScrollContainer" parent="language_select_popup/panel/margin/language_select_vbox/hbox/languages"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="list" type="VBoxContainer" parent="language_select_popup/panel/margin/language_select_vbox/hbox/languages/scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="_button_tmp" type="Button" parent="language_select_popup/panel/margin/language_select_vbox/hbox/languages/scroll/list"]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_e63gn")
+text = "en"
+alignment = 0
+
+[node name="countries" type="VBoxContainer" parent="language_select_popup/panel/margin/language_select_vbox/hbox"]
+modulate = Color(0.75, 0.75, 0.75, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="line_edit" type="LineEdit" parent="language_select_popup/panel/margin/language_select_vbox/hbox/countries"]
+layout_mode = 2
+placeholder_text = "Country (Optional)..."
+
+[node name="h_separator" type="HSeparator" parent="language_select_popup/panel/margin/language_select_vbox/hbox/countries"]
+layout_mode = 2
+
+[node name="scroll" type="ScrollContainer" parent="language_select_popup/panel/margin/language_select_vbox/hbox/countries"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="list" type="VBoxContainer" parent="language_select_popup/panel/margin/language_select_vbox/hbox/countries/scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="_button_tmp" type="Button" parent="language_select_popup/panel/margin/language_select_vbox/hbox/countries/scroll/list"]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_u2hri")
+text = "en"
+alignment = 0
+
+[node name="select" type="Button" parent="language_select_popup/panel/margin/language_select_vbox"]
+layout_mode = 2
+text = "Select"
+
+[node name="_esc_tip" type="Label" parent="language_select_popup/panel"]
+self_modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "ESC"
+
+[node name="information_popup" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+script = ExtResource("7_4m4xv")
+
+[node name="close_button" type="Button" parent="information_popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5a5h")
+flat = true
+
+[node name="panel" type="PanelContainer" parent="information_popup"]
+self_modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = 80.0
+offset_right = -37.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin" type="MarginContainer" parent="information_popup/panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="information_popup_vbox" type="VBoxContainer" parent="information_popup/panel/margin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="title" type="Label" parent="information_popup/panel/margin/information_popup_vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Information"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="h_separator" type="HSeparator" parent="information_popup/panel/margin/information_popup_vbox"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.55
+
+[node name="hbox" type="HBoxContainer" parent="information_popup/panel/margin/information_popup_vbox"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="description" type="PanelContainer" parent="information_popup/panel/margin/information_popup_vbox/hbox"]
+self_modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="information_description_vbox" type="VBoxContainer" parent="information_popup/panel/margin/information_popup_vbox/hbox/description"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 6
+
+[node name="__title" type="Label" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.470588)
+text = "Description"
+
+[node name="_property_tmp" type="HBoxContainer" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="remove" type="Button" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox/_property_tmp"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Remove"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Remove"
+
+[node name="key" type="LineEdit" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox/_property_tmp"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.784314)
+text = "Project-Id-Version"
+expand_to_text_length = true
+
+[node name="colon" type="Label" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox/_property_tmp"]
+layout_mode = 2
+text = ":"
+
+[node name="value" type="LineEdit" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox/_property_tmp"]
+layout_mode = 2
+placeholder_text = "Value..."
+expand_to_text_length = true
+
+[node name="reset" type="Button" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox/_property_tmp"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="_no_description" type="Label" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "No description"
+
+[node name="__add" type="Button" parent="information_popup/panel/margin/information_popup_vbox/hbox/description/information_description_vbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Add new"
+icon = SubResource("ImageTexture_w4ala")
+icon_alignment = 1
+script = ExtResource("3_lq5gb")
+icon_name = "Add"
+
+[node name="comments" type="PanelContainer" parent="information_popup/panel/margin/information_popup_vbox/hbox"]
+self_modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+
+[node name="vbox" type="VBoxContainer" parent="information_popup/panel/margin/information_popup_vbox/hbox/comments"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="information_popup/panel/margin/information_popup_vbox/hbox/comments/vbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.470588)
+text = "Comments"
+
+[node name="text_edit" type="TextEdit" parent="information_popup/panel/margin/information_popup_vbox/hbox/comments/vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+text = "LANGUAGE translation for Game Name for the following files:
+res://scene.tscn
+res://main.tscn
+FIRST AUTHOR <EMAIL@ADDRESS>, YEAR."
+placeholder_text = "Comments..."
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="buttons_hbox" type="HBoxContainer" parent="information_popup/panel/margin/information_popup_vbox/hbox/comments/vbox/text_edit"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -16.0
+offset_right = -20.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="reset" type="Button" parent="information_popup/panel/margin/information_popup_vbox/hbox/comments/vbox/text_edit/buttons_hbox"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+tooltip_text = "Reset"
+icon = SubResource("ImageTexture_w4ala")
+script = ExtResource("3_lq5gb")
+icon_name = "Reload"
+
+[node name="h_separator2" type="HSeparator" parent="information_popup/panel/margin/information_popup_vbox"]
+layout_mode = 2
+size_flags_vertical = 10
+size_flags_stretch_ratio = 0.55
+theme_override_styles/separator = SubResource("StyleBoxEmpty_yswm3")
+
+[node name="_esc_tip" type="Label" parent="information_popup/panel"]
+self_modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "ESC"
+
+[node name="clear_popup" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+script = ExtResource("8_5d0xx")
+
+[node name="close_button" type="Button" parent="clear_popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5a5h")
+flat = true
+
+[node name="panel" type="PanelContainer" parent="clear_popup"]
+self_modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 93.0
+offset_top = 344.0
+offset_right = -93.0
+offset_bottom = -343.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin" type="MarginContainer" parent="clear_popup/panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="information_popup_vbox" type="VBoxContainer" parent="clear_popup/panel/margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="title" type="Label" parent="clear_popup/panel/margin/information_popup_vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Clear file?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="h_separator" type="HSeparator" parent="clear_popup/panel/margin/information_popup_vbox"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.55
+
+[node name="clear_popup_ok" type="Button" parent="clear_popup/panel/margin/information_popup_vbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Yes"
+
+[node name="_esc_tip" type="Label" parent="clear_popup/panel"]
+self_modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "ESC"
+
+[node name="rename_scene_names_popup" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+script = ExtResource("9_30gso")
+
+[node name="close_button" type="Button" parent="rename_scene_names_popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5a5h")
+flat = true
+
+[node name="panel" type="PanelContainer" parent="rename_scene_names_popup"]
+self_modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 348.0
+offset_right = -99.0
+offset_bottom = -347.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin" type="MarginContainer" parent="rename_scene_names_popup/panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="vbox" type="VBoxContainer" parent="rename_scene_names_popup/panel/margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="title" type="Label" parent="rename_scene_names_popup/panel/margin/vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Rename Scene Names"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="h_separator" type="HSeparator" parent="rename_scene_names_popup/panel/margin/vbox"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.55
+
+[node name="label" type="Label" parent="rename_scene_names_popup/panel/margin/vbox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+text = "Press enter to change scene name"
+
+[node name="rename_scene_names_vbox" type="VBoxContainer" parent="rename_scene_names_popup/panel/margin/vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="_scene_name_tmp" type="LineEdit" parent="rename_scene_names_popup/panel/margin/vbox/rename_scene_names_vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 0.784314)
+text = "scene.tscn"
+expand_to_text_length = true
+
+[node name="_esc_tip" type="Label" parent="rename_scene_names_popup/panel"]
+self_modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "ESC"
+
+[node name="loading" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+
+[node name="button" type="Button" parent="loading"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5a5h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5a5h")
+flat = true
+
+[node name="label" type="Label" parent="loading"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.5
+offset_right = 37.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+text = "Loading..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hide_timer" type="Timer" parent="loading"]
+wait_time = 2.5
+
+[node name="popup_menu" type="PopupMenu" parent="."]
+size = Vector2i(209, 2)
+item_count = 10
+item_0/text = "No selection"
+item_0/id = 0
+item_0/separator = true
+item_1/text = "Delete"
+item_1/id = 1
+item_2/text = "Add description"
+item_2/id = 2
+item_3/text = "Remove description"
+item_3/id = 3
+item_4/text = "Unselect all"
+item_4/id = 4
+item_5/text = "Add plural form"
+item_5/id = 5
+item_6/text = "Remove plural forms"
+item_6/id = 6
+item_7/text = "Add previous original"
+item_7/id = 7
+item_8/text = "Add flag"
+item_8/id = 8
+item_9/text = "Rename scene name"
+item_9/id = 9
