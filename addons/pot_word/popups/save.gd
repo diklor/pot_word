@@ -13,17 +13,20 @@ signal language_chosen(language_string: String)
 
 
 
-static func _clean_text(text: String) -> String:
-	return text.trim_prefix('"').trim_suffix('"').replace('\n', '\\n').trim_suffix('\n')
+static func _clean_text(text: String, add_quotes := false) -> String:
+	text = text.trim_prefix('"').trim_suffix('"').replace('\n', '\\n').trim_suffix('\n').c_escape()
+	if add_quotes:
+		text = '"' + text + '"'
+	return text
 
 static func get_multiline_string(text: String, add_quotes := false) -> String:
 	if text.contains('\n'):
 		var multiline_text := '""\n'
 		for line: String in text:
-			multiline_text += '"' + _clean_text(line).c_escape() + '"\n'
+			multiline_text += '"' + _clean_text(line, add_quotes) + '"\n'
 		return multiline_text
 	else:
-		return _clean_text(text) + '\n'
+		return _clean_text(text, add_quotes) + '\n'
 
 
 func _ready() -> void:
@@ -38,6 +41,7 @@ func _ready() -> void:
 	%save_properties_hbox.get_node('clear_description').toggled.connect(func(state: bool) -> void:
 		%save_popup_vbox.get_node('export_description').modulate.v = (0.6 if state else 1.0)
 	)
+	%all_plural_forms_label.meta_clicked.connect(func(_meta: Variant) -> void: OS.shell_open('https://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html'))
 	%save_popup_buttons_hbox.get_node('back').pressed.connect(hide)
 	%save_popup_buttons_hbox.get_node('save').pressed.connect(func() -> void:
 		if !DOCK.current_pot_file or DOCK.current_pot_file.slots.is_empty():

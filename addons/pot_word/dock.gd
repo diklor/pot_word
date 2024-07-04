@@ -365,7 +365,7 @@ func _ready() -> void:
 					var pot_slot: PotSlot = current_pot_file.slots[slot_cont.get_meta('slot_index', 0)]
 					if (id == 6):
 						F.cont_func(slot_cont.get_node('text_edits_plural'), func(plural_cont: Container) -> void:
-							_remove_plural_cont(slot_cont, plural_cont.name.to_int(), pot_slot)
+							self._remove_plural_cont(slot_cont, plural_cont.name.to_int(), pot_slot)
 						)
 					else:
 						_add_plural_cont(slot_cont, pot_slot, pot_slot.message_translated_plurals.size() + 1)
@@ -533,15 +533,15 @@ func load_file() -> void:
 				
 				elif line.begins_with('#:'): #single line
 					check_slot_callable()
-					currently_reading_pot_slot.message_scene_name = line.trim_prefix('#: ').trim_prefix('#:')
+					currently_reading_pot_slot.message_scene_name = line.trim_prefix('#: ').trim_prefix('#:').c_unescape()
 				
 				elif line.begins_with('#|'): #single line
 					check_slot_callable()
-					currently_reading_pot_slot.message_id_previous = line.trim_prefix('#| ').trim_prefix('#|')
+					currently_reading_pot_slot.message_id_previous = line.trim_prefix('#| ').trim_prefix('#|').c_unescape()
 				
 				elif line.begins_with('#,'): #single line
 					check_slot_callable()
-					currently_reading_pot_slot.message_flag = line.trim_prefix('#, ').trim_prefix('#,')
+					currently_reading_pot_slot.message_flag = line.trim_prefix('#, ').trim_prefix('#,').c_unescape()
 	
 	currently_reading_pot_slot = null
 	_slots_count = 0

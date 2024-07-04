@@ -1,0 +1,837 @@
+# LANGUAGE translation for Verdict: Protocol for the following files:
+# res://scenes/menu.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Verdict: Protocol\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: scenes/menu.tscn
+msgid "VERDICT"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Server list"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Join"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Host"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "username"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "ID: 0"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "0"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Global"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "|  K/D : 1"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Registered date: 0/0/0"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Minutes: 0"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "New data will be written on the match end"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Refresh data"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Settings"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "General"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Binds"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Customisation"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "All Settings"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Game Settings"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Graphics Preset        "
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "DEFAULT"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "POTATO"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "LOW"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "MEDIUM"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "HIGH"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "ULTRA"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "TO LOG IN SCREEN"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "LOG OUT"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Range"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "70"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Boolean"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "󰘎"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "InputBox"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ".<"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Option"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Viewmodel Offset Position"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Viewmodel Offset Preview"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Position Offset: ([color=red]%s[/color], [color=green]%s[/color], [color=blue]%s[/color])"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Rotation Offset: ([color=red]%s[/color], [color=green]%s[/color], [color=blue]%s[/color])"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Scale Offset: ([color=red]%s[/color], [color=green]%s[/color], [color=blue]%s[/color])"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Weird factor: [color=red]%s[/color]"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Change weapon"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "ThemeName"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Click on setting name to show description"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "A little -FPS"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "-FPS"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Neutral"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "A little +FPS"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "+FPS"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Fun"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "100 C"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "+"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Inventory"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Marketplace\n"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "ItemName"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ""
+"%s\n"
+"\n"
+"Bought:  %s\n"
+"Stickers:  [%s]\n"
+"Rarity: [color=%s]%s[/color]"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "CUSTOMIZE"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "SELL"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "T"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "X"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "CT"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "ALL"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Cases"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Kill Effect"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Weapons"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Qrambit"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Melee"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Rifles"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Pistols"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Assault"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Sniper"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "RARITY"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "BUY:  0 C"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Sending messages..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Message sending error..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ""
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Recieving messages..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Failed to get messages"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "No messages"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Loading servers..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Loaded"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Time-out..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Stopped (Time-out...)"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "News"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Getting"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Search"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Enter"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Ctrl + E"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "@username"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Message"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "No servers available"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Message..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Stopped"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Feedback"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Getting..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Successfully loaded"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Error"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Nothing"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "No internet connection"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "v 1.0.0"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "$"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Description Example"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Setting Name"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Host Server"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ">.address"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Max players: 10"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ">."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "PlayerName connected"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Enter message..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Players list"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "PlayerName"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Ready"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Kick"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Not ready"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "|  Server Info"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "RESET"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Gamemode"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Map"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Choose by voting"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Voting Time: 10s"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Refuse new connections"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Exit"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Starting... (3)"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "CaseName"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "RECONDITE"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Are you sure?"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "[center]You want to [color=%s]%s[/color] %s for[center]"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "5000"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "1"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Amount"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "min"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "MAX"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "In: %s Case"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "No"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "YES"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "AK49 \"ProKiller1337\""
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "BACK"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Reset transforms:   "
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "F"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Move"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "WASD QE"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Pan"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Rotate camera around object"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Rotate camera"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Zoom"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "WHEEL UP/DOWN"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Regulate FOV"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "ALT +"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Glow\n"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Ambient Occlusion"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Global Illumination"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Screen Space Indirect Lighting"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Depth Of Field"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Aesthetic Mode"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Green Screen"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Stickers"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "StickerName"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Select sticker"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Select avatar"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Cancel"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Select file"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Select"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Recieving server list..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Failed to get server list"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Server list is empty"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Preparing..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Search..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Server Adress"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Players"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Host username"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Server data"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "server_name"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "1/2"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "DeathMatch: condition"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Loading..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "|  Host new server"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ">.server_ip"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Server IP"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Hide"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Reset"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ">.server_port"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Server Port"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ""
+"This port is not open.\n"
+"Other people will not able to connect to it"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Manage ports"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ">.TOP_SERVER1337..."
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Server Name"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Generate"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Singleplayer (Server will not be created publicly)"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Host server"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ""
+"\n"
+"Refreshing...\n"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Command:  netsh advfirewall firewall add rule name=\"Open Port\" dir=in action=allow protocol=TCP localport=PORT"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Command:  netsh advfirewall firewall delete rule name=\"Open Port\" protocol=TCP localport=PORT"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ""
+"Commands:\n"
+"\t\tLISTENING (Opened):    netstat -ano | find \"127.0.0.1\" | find \"LISTENING\" | find \"TCP\"\n"
+"\t\tESTABLISHED (Closed):    netsh advfirewall firewall delete rule name=\"Open Port\" protocol=TCP localport=\n"
+"\n"
+"\t\tBoth:  netstat -ano | find \"127.0.0.1\" | find \"LISTENING\" | find \"TCP\"  &&  netstat -ano | find \"127.0.0.1\" | find \"ESTABLISHED\" | find \"TCP\""
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "List of possible ports"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ""
+"Commands:\n"
+"LISTENING (Opened):    netstat -ano | find \"127.0.0.1\" | find \"LISTENING\" | find \"TCP\"\n"
+"ESTABLISHED (Closed):    netstat -ano | find \"127.0.0.1\" | find \"ESTABLISHED\" | find \"TCP\"\n"
+"\n"
+"Combined:\n"
+"netstat -ano | find \"127.0.0.1\" | find \"LISTENING\" | find \"TCP\" && netstat -ano | find \"127.0.0.1\" | find \"ESTABLISHED\" | find \"TCP\""
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ""
+"6550\n"
+"2555\n"
+"6005\n"
+"\n"
+"End"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Refresh"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Open port"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid ">.9999"
+msgstr ""
+
+#: scenes/menu.tscn
+msgid "Close port"
+msgstr ""
